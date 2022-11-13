@@ -8,12 +8,12 @@ Person::Person(std::string first, std::string last, int arbitrary)
 	:
 	firstname(first),lastname(last),arbitrarynumber(arbitrary)
 {
-	cout << "constructing " << firstname << " " << lastname << endl;
+	cout << "constructing " << GetName() << endl;
 }
 
 Person::Person() : arbitrarynumber(0)
 {
-	cout << "constructing " << firstname << " " << lastname << endl;
+	cout << "constructing " << GetName() << endl;
 }
 
 Person::~Person()
@@ -21,7 +21,7 @@ Person::~Person()
 	cout << "destructing " << firstname << " " << lastname << endl;
 }
 
-std::string Person::getName()
+std::string Person::GetName() const
 {
 	return firstname + " " + lastname;
 }
