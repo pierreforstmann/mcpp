@@ -33,6 +33,22 @@ int main()
     ne = NetworkError::ok;
 
 
+    Person p3("John", "Last", 123);
+    Person p4("James", "Last", 456);
+    cout << "p3 is ";
+    if (!(p3 < p4))
+	cout << "not ";
+    cout << "less than p4" << endl;
+
+    cout << "p3 is ";
+    if (!(p3 < 300))
+	cout << "not ";
+    cout << "less than 300" << endl;
+
+    cout << "300 is ";
+    if (!(300 < p3))
+	 cout << "not ";
+    cout << "less than p3" << endl;
     return 0;
 
 }

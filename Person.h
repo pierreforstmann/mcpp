@@ -13,7 +13,9 @@ public:
    std::string GetName() const;
    int GetNumber () const {return arbitrarynumber;}
    void SetNumber(int number) {arbitrarynumber =  number; }
+   bool operator<(Person const& p) const;
+   bool operator<(int i) const;
 
 };
 
-
+bool operator<(int i, Person const& p);
