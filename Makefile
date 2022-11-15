@@ -1,7 +1,7 @@
 #
 # Makefile
 #
-all:	hello vat vat2 cao
+all:	hello vat vat2 cao tf tc 
 
 hello:	hello.cpp
 	g++ hello.cpp -Wall -o hello
@@ -15,5 +15,10 @@ vat2:	vat2.cpp
 cao:	cao.cpp Person.cpp Person.h Tweeter.cpp Tweeter.h status.h
 	g++ cao.cpp Person.cpp Tweeter.cpp -Wall -o cao 
 
+tf:	tf.cpp Person.cpp Person.h 
+	g++ tf.cpp Person.cpp -Wall -o tf
+
+tc:	tc.cpp Person.cpp Person.h 
+	g++ tc.cpp Person.cpp -Wall -o tc
 clean: 
-	rm -f *.o hello vat vat2 cao
+	rm -f *.o hello vat vat2 cao tf tc

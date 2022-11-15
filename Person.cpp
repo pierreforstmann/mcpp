@@ -34,6 +34,8 @@ bool Person::operator<(int i) const
 {
 	return arbitrarynumber < i;
 }
+
+
 //
 // free function
 // 
