@@ -1,7 +1,7 @@
 #
 # Makefile
 #
-all:	hello vat vat2 cao tf tc par c
+all:	hello vat vat2 cao tf tc par c fs m
 
 hello:	hello.cpp
 	g++ hello.cpp -Wall -o hello
@@ -12,20 +12,25 @@ vat:	vat.cpp
 vat2:	vat2.cpp
 	g++ vat2.cpp -Wall -o vat2 
 
-cao:	cao.cpp Person.cpp Person.h Tweeter.cpp Tweeter.h status.h
-	g++ cao.cpp Person.cpp Tweeter.cpp -Wall -o cao 
+cao:	cao.cpp Person.cpp Person.h Tweeter.cpp Tweeter.h status.h Resource.h
+	g++ cao.cpp Person.cpp Tweeter.cpp Resource.cpp -Wall -o cao 
 
-tf:	tf.cpp Person.cpp Person.h 
-	g++ tf.cpp Person.cpp -Wall -o tf
+tf:	tf.cpp Person.cpp Person.h Resource.h
+	g++ tf.cpp Person.cpp Resource.cpp -Wall -o tf
 
-tc:	tc.cpp Person.cpp Person.h 
-	g++ tc.cpp Person.cpp -Wall -o tc
+tc:	tc.cpp Person.cpp Person.h Resource.h
+	g++ tc.cpp Person.cpp Resource.cpp -Wall -o tc
 
-par:	par.cpp Person.cpp Person.h 
-	g++ par.cpp Person.cpp -Wall -o par 
+par:	par.cpp Person.cpp Person.h Resource.h
+	g++ par.cpp Person.cpp Resource.cpp -Wall -o par 
 
+c:	c.cpp Person.cpp Person.h Resource.h 
+	g++ c.cpp Person.cpp Resource.cpp -Wall -o c
 
-c:	c.cpp Person.cpp Person.h 
-	g++ c.cpp Person.cpp -Wall -o c
+fs:	fs.cpp Resource.cpp Resource.h
+	g++ fs.cpp Resource.cpp -Wall -o fs
+
+m:	m.cpp Resource.cpp Resource.h Person.cpp Person.h
+	g++ m.cpp Resource.cpp Person.cpp -Wall -o m
 clean: 
-	rm -f *.o hello vat vat2 cao tf tc par c
+	rm -f *.o hello vat vat2 cao tf tc par c fs m

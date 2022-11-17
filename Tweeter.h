@@ -1,5 +1,6 @@
 #pragma once
 #include "Person.h"
+#include "Resource.h"
 #include <string>
 
 class Tweeter:
