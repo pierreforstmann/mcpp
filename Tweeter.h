@@ -14,4 +14,6 @@ public:
 	int arbitrary,
 	std::string handle);
   ~Tweeter();
+  std::string GetName() const;
+  int GetNumber() const { return 0; }
 };

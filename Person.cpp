@@ -7,8 +7,7 @@ using std::endl;
 
 Person::Person(std::string first, std::string last, int arbitrary)
 	:
-	firstname(first),lastname(last),arbitrarynumber(arbitrary),
-	pResource(nullptr)
+	firstname(first),lastname(last),arbitrarynumber(arbitrary)
 {
 	cout << "constructing " << GetName() << endl;
 }
@@ -21,7 +20,6 @@ Person::Person() : arbitrarynumber(0)
 Person::~Person()
 {
 	cout << "destructing " << firstname << " " << lastname << endl;
-	delete pResource;
 }
 
 std::string Person::GetName() const
@@ -40,19 +38,18 @@ bool Person::operator<(int i) const
 
 void Person::AddResource()
 {
-	delete pResource;
-	pResource=new Resource("Resource for " + GetName());
+	pResource.reset();
+	pResource = std::make_shared<Resource>("Resource for " + GetName());
 }
 
 Person::Person(Person const & p)
 {
-	pResource = new Resource(p.pResource->GetName());
+	pResource = std::make_shared<Resource>("Resource for " + GetName()); 
 }
 
 Person& Person::operator=(const Person& p)
 {
-	delete pResource;
-	pResource = new Resource(p.pResource-> GetName());
+	pResource = std::make_shared<Resource>("Resource for " + GetName()); 
 	return *this;
 }
 

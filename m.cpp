@@ -1,14 +1,15 @@
 // m.cpp
 // 
 #include "Person.h"
+#include <string>
+using std::string;
 
 int main()
 {
    Person Adam("Adam", "Jones", 345);
    Adam.AddResource();
-   Adam.SetFirstName("Adam2");
+   string s1 = Adam.GetResourceName();
    Adam.AddResource();
-   Person Adam2 = Adam;
    return 0;
 
 }
