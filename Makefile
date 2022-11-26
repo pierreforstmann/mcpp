@@ -1,7 +1,7 @@
 #
 # Makefile
 #
-all:	hello vat vat2 cao tf tc par c fs m pai ct ctn lav l
+all:	hello vat vat2 cao tf tc par c fs m pai ct ctn lav l a
 
 hello:	hello.cpp
 	g++ hello.cpp -Wall -o hello
@@ -47,5 +47,8 @@ lav:	lav.cpp
 
 l:	l.cpp Resource.h Resource.cpp 
 	g++ l.cpp Resource.cpp -Wall -o l 
+
+a:	a.cpp  
+	g++ a.cpp -Wall -o a 
 clean: 
-	rm -f *.o hello vat vat2 cao tf tc par c fs m pai ct ctn lav l
+	rm -f *.o hello vat vat2 cao tf tc par c fs m pai ct ctn lav l a
