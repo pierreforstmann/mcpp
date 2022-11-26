@@ -1,7 +1,7 @@
 #
 # Makefile
 #
-all:	hello vat vat2 cao tf tc par c fs m pai ct ctn lav l a
+all:	hello vat vat2 cao tf tc par c fs m pai ct ctn lav l a lambda
 
 hello:	hello.cpp
 	g++ hello.cpp -Wall -o hello
@@ -50,5 +50,8 @@ l:	l.cpp Resource.h Resource.cpp
 
 a:	a.cpp  
 	g++ a.cpp -Wall -o a 
+
+lambda:	lambda.cpp  
+	g++ lambda.cpp -Wall -o lambda 
 clean: 
-	rm -f *.o hello vat vat2 cao tf tc par c fs m pai ct ctn lav l a
+	rm -f *.o hello vat vat2 cao tf tc par c fs m pai ct ctn lav l a lambda
