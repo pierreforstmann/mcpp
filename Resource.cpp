@@ -21,6 +21,21 @@ Resource::~Resource(void)
     cout << "destructing " << name << endl;
 }
 
+Resource::Resource(Resource&& r) :name(std::move(r.name))
+{
+}
+
+Resource & Resource::operator=(Resource&& r)
+{
+	if (this != &r)
+	{
+		name = std::move(r.name);
+		r.name.clear();
+		cout << "move assigning " << name << '\n';
+	}
+	return *this;
+}
+
 Resource& Resource:: operator=(const Resource& r)
 {	
     name  = r.GetName();

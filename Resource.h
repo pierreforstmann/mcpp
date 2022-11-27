@@ -13,4 +13,9 @@ public:
    Resource& operator=(const Resource& r);
    virtual ~Resource(void);
    virtual std::string GetName() const { return name; }
+   Resource(Resource &&r);
+   Resource& operator=(Resource &&r);
+   bool operator>(const Resource& r) { return r.name > name;}
+   bool operator<(const Resource& r) { return r.name < name;}
+   bool operator==(const Resource& r) { return r.name == name;}
 };
