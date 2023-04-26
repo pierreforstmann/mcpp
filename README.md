@@ -22,3 +22,5 @@
 
 
 <a href=https://philippe-dunski.blog4ever.xyz/coder-efficacement-bonnes-pratiques-et-erreurs-a-eviter-en-c>Coder efficacement : Bonnes pratiques et erreurs à éviter en C++</a>
+
+<a href=https://www.sandordargo.com/tags/books>Sandor Dargo's Blog books</a>
