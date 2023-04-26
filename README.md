@@ -19,3 +19,6 @@
 <br>
 <a href=https://projecteuler.net/recent>Project Euler</a>
 <br>
+
+
+<a href=https://philippe-dunski.blog4ever.xyz/coder-efficacement-bonnes-pratiques-et-erreurs-a-eviter-en-c>Coder efficacement : Bonnes pratiques et erreurs à éviter en C++</a>
